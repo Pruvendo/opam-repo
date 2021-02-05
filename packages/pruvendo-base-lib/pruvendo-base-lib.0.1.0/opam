@@ -1,0 +1,26 @@
+synopsis:     "Pruvendo coq library over pruvendo-base"
+description:  "Pruvendo coq library over pruvendo-base"
+opam-version: "2.0"
+maintainer:   "team@pruvendo.com"
+authors:      "Pruvendo Team"
+homepage:     "git@vcs.modus-ponens.com:ton/pruvendo-base-lib.git"
+dev-repo:     "git+https://github.com/Pruvendo/opam-repo.git"
+bug-reports:  "git@vcs.modus-ponens.com:ton/pruvendo-base-lib.git"
+doc:          "https://pruvendo.github.io/pruvendo-base-lib"
+
+license:      "GPL 3"
+
+depends: [
+  "coq"           { >= "8.11.0" }
+  "dune"          { >= "2.8.0"  }
+  "pruvendo-base" { >= "0.2.0"  }
+]
+
+build: [ "dune" "build" "-p" name "-j" jobs ]
+url {
+  src: "https://pruvendo.com/files/pruvendo-base-lib-v0.1.0.tbz"
+  checksum: [
+    "md5=9ce9476f6d70bf241b8975cfbb7a9ddb"
+    "sha512=e2a38d13782fd44426f970d7c6de6f4a456691346883ddf0e2930b8d7a11d7cb08fa4394426f7321ac0b50fd43b7e6fce774a01e455f7c31263924eeb918936e"
+  ]
+}
