@@ -1,0 +1,25 @@
+synopsis:     "Pruvendo base coq theory"
+description:  "Pruvendo base coq theory"
+opam-version: "2.0"
+maintainer:   "team@pruvendo.com"
+authors:      "Pruvendo Team"
+homepage:     "git://git@vcs.modus-ponens.com:ton/coq-finproof-base.git"
+dev-repo:     "git+https://github.com/Pruvendo/opam-repo.git"
+bug-reports:  "git://git@vcs.modus-ponens.com:ton/coq-finproof-base.git"
+doc:          "https://pruvendo.github.io/pruvendo-base"
+
+license:      "GPL 3"
+
+depends: [
+  "coq"           { >= "8.11.0" }
+  "dune"          { >= "2.8.0"  }
+]
+
+build: [ "dune" "build" "-p" name "-j" jobs ]
+url {
+  src: "https://pruvendo.com/files/pruvendo-base-v0.2.0.tbz"
+  checksum: [
+    "md5=bf9592261700dd74cd3f4fdc0909c65f"
+    "sha512=a5a7b87cbc69f2246d5c68291cd685465ec04ac4fa7ce1651547476b399d70f3030ba466881854679be46da1eb9f3aec0a6720988f0038deee535e2b9bded8d3"
+  ]
+}
