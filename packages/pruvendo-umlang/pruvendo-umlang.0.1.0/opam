@@ -1,0 +1,26 @@
+synopsis:     "Pruvendo universal monadic language"
+description:  "Pruvendo universal monadic language"
+opam-version: "2.0"
+maintainer:   "team@pruvendo.com"
+authors:      "Pruvendo Team"
+homepage:     "git://git@vcs.modus-ponens.com:ton/solidity-monadic-language.git"
+dev-repo:     "git+https://github.com/Pruvendo/opam-repo.git"
+bug-reports:  "git://git@vcs.modus-ponens.com:ton/solidity-monadic-language.git"
+doc:          "https://pruvendo.github.io/pruvendo-umlang"
+
+license:      "GPL 3"
+
+depends: [
+  "coq"           { >= "8.11.0" }
+  "dune"          { >= "2.8.0"  }
+  "pruvendo-base" { >= "0.2.0" }
+]
+
+build: [ "dune" "build" "-p" name "-j" jobs ]
+url {
+  src: "https://pruvendo.com/files/pruvendo-umlang-v0.1.0.tbz"
+  checksum: [
+    "md5=46451aaa889207bb92c04b0560577121"
+    "sha512=355d7cb85ad3a1a8292607af56aefd2c1508a972d14e2ef9eb4b569f9fd8ad2b14b54b192d65a26453dcf7ecbd15172450e2d9c99212619c2ee2b0cd5865ebb3"
+  ]
+}
